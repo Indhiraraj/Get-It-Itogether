@@ -1,0 +1,38 @@
+<%- include('header'); -%>
+    
+    <div class="box" id="heading">
+        <h1><%= pageTitle %></h1>
+    </div>
+    
+    <div class="box">
+        <% for (let index = 0; index < NewTask.length; index++) {%>
+        <div class="item">                
+                <input type="checkbox"> 
+                <p><%= NewTask[index]  %></p>
+           
+            </div>    
+        <% } %>
+            <form action="/" method="post" class="item">
+                <input class="text" type="text" name="newTask" placeholder="New Task" autocomplete="off">
+                <button type="submit" name ="title" value=<%= pageTitle %>>+</button>
+                </form>
+    </div>
+
+    <div class="btns">
+        <% if (pageTitle === "Work" ) { %>
+            <a class="btn" href="/todo">Todo List</a>
+        
+        <% } else if ( pageTitle != "Work") { %>
+         
+            <a class="btn" href="/work">Work List</a>
+        <% } %>
+        
+    </div>
+
+    <%- include('footer'); -%>
+    
+   
+
+
+    
+     
