@@ -1,6 +1,6 @@
 
 
-var date =function(){
+function date(){
 const date=new Date();
 
 const options={
